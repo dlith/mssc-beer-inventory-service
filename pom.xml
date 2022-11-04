@@ -6,11 +6,11 @@
     <parent>
         <groupId>com.github.sfg-beer-works</groupId>
         <artifactId>sfg-brewery-bom</artifactId>
-        <version>1.0.22</version>
+        <version>1.0.7</version>
     </parent>
 
-    <artifactId>sfg-brewery-inventory-service</artifactId>
-    <version>1.0.6-SNAPSHOT</version>
+    <artifactId>mssc-beer-inventory-service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <name>SFG Brewery Inventory Service</name>
 
     <description>SFG Brewery Inventory Service</description>
