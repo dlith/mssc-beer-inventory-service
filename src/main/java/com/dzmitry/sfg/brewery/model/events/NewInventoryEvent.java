@@ -1,4 +1,4 @@
-package com.dzmitry.common.events;
+package com.dzmitry.sfg.brewery.model.events;
 
 import lombok.NoArgsConstructor;
 
