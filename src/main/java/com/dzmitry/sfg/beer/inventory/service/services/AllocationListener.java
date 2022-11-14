@@ -5,18 +5,16 @@ import com.dzmitry.sfg.brewery.model.events.AllocateOrderRequest;
 import com.dzmitry.sfg.brewery.model.events.AllocateOrderResult;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.stereotype.Component;
 
 @Slf4j
 @RequiredArgsConstructor
-@Configuration
+@Component
 public class AllocationListener {
-
     private final AllocationService allocationService;
     private final JmsTemplate jmsTemplate;
-
 
     @JmsListener(destination = JmsConfig.ALLOCATE_ORDER_QUEUE)
     public void listen(AllocateOrderRequest request) {

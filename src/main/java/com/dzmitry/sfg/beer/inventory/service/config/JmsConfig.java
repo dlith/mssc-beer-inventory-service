@@ -17,12 +17,12 @@ public class JmsConfig {
 
 
 
-    @Bean
-    public MessageConverter messageConverter(ObjectMapper objectMapper) {
+    @Bean // Serialize message content to json using TextMessage
+    public MessageConverter jacksonJmsMessageConverter(ObjectMapper objectMapper) {
         MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
         converter.setTargetType(MessageType.TEXT);
-        converter.setObjectMapper(objectMapper);
         converter.setTypeIdPropertyName("_type");
+        converter.setObjectMapper(objectMapper);
         return converter;
     }
 }
